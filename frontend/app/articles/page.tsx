@@ -35,7 +35,7 @@ export default function Articles() {
 
   return (
     <div className="w-full px-1 md:px-20 flex flex-col gap-7">
-      <div className="p-3 bg-gray-50 w-full shadow-md rounded-md">
+      <div className="p-3 bg-gray-50 w-full shadow-lg rounded-md">
         <div className="flex flex-row items-center">
           <div className="p-5">
             <label className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">

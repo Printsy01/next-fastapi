@@ -3,9 +3,9 @@
 Ceci est une simple application qui gère une liste avec une possibilité de rechercher selon le titre et résumé de celle-ci, et propose un petit service de chatbot.
 Arrivé sur la page à l’URL `/articles`, on aura :
 
-* La liste des articles
-* Un menu pour filtrer et rechercher dans la liste
-* Une icône message à côté : ouvre une sidebar pour une discussion avec le chatbot
+- La liste des articles
+- Un menu pour filtrer et rechercher dans la liste
+- Une icône message à côté : ouvre une sidebar pour une discussion avec le chatbot
 
 ---
 
@@ -13,9 +13,9 @@ Arrivé sur la page à l’URL `/articles`, on aura :
 
 Avant de pouvoir lancer cette application, assurez-vous d’avoir installé :
 
-* [Node.js](https://nodejs.org)
-* [Python](https://www.python.org)
-* [Git](https://git-scm.com)
+- [Node.js](https://nodejs.org)
+- [Python](https://www.python.org)
+- [Git](https://git-scm.com)
 
 ---
 
@@ -28,6 +28,7 @@ git clone https://github.com/Printsy01/next-fastapi.git
 ```
 
 Entrer dans le dossier
+
 ```bash
 cd next-fastapi
 ```
@@ -40,6 +41,7 @@ npm install
 ```
 
 Génerer le client prisma
+
 ```bash
 npx prisma generate
 ```
@@ -80,7 +82,7 @@ Créer un fichier `.env.local` dans chaque projet (`/frontend/.env.local` et `/p
 ```env
 DATABASE_URL="file:./seed.db"
 API_URL="http://localhost:3000"
-FASTAPI_URL="http://localhost:8000"
+FASTAPI_URL="http://localhost:8001"
 ```
 
 ### Pour FastAPI
@@ -102,18 +104,18 @@ npm run dev
 ### FastAPI (dans `/python-service`)
 
 ```bash
-uvicorn main:app --reload --port 8000
+uvicorn main:app --reload --port 8001
 ```
 
 ---
 
 # Choix techniques
 
-* **Frontend** : React, Tailwind CSS, Zod
-* **Backend principal** : Next.js (API Routes)
-* **Backend chatbot** : FastAPI, Pydantic
-* **Base de données** : SQLite
-* **ORM** : Prisma
+- **Frontend** : React, Tailwind CSS, Zod
+- **Backend principal** : Next.js (API Routes)
+- **Backend chatbot** : FastAPI, Pydantic
+- **Base de données** : SQLite
+- **ORM** : Prisma
 
 ---
 
