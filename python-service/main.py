@@ -2,8 +2,18 @@ from fastapi import FastAPI
 from dto import MessageBody
 import json
 from utils import *
+from fastapi.middleware.cors import CORSMiddleware
+import os
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=os.getenv("ALLOWED_ORIGINS", "http://localhost:3000").split(','),
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/chat")
 def chat(message: MessageBody):
