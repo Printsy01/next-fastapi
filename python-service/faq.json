@@ -1,0 +1,144 @@
+[
+  {
+    "id": "faq#ebitda",
+    "q": "Qu’est-ce que l’EBITDA ?",
+    "a": "L’EBITDA est un indicateur de performance opérationnelle avant intérêts, impôts, dépréciations et amortissements.",
+    "keywords": [
+      "ebitda",
+      "résultat opérationnel",
+      "indicateur",
+      "profitabilité"
+    ]
+  },
+  {
+    "id": "faq#marge-brute",
+    "q": "À quoi sert la marge brute ?",
+    "a": "Elle mesure la part du chiffre d’affaires restant après le coût des ventes, utile pour suivre la performance commerciale et pricing.",
+    "keywords": [
+      "marge brute",
+      "chiffre d’affaires",
+      "coût des ventes",
+      "rentabilité"
+    ]
+  },
+  {
+    "id": "faq#flux-tresorerie",
+    "q": "Qu’est-ce que le flux de trésorerie ?",
+    "a": "Le flux de trésorerie correspond aux entrées et sorties de liquidités, permettant d’évaluer la capacité d’une entreprise à générer du cash.",
+    "keywords": ["flux de trésorerie", "cash flow", "liquidité", "financement"]
+  },
+  {
+    "id": "faq#bilan",
+    "q": "À quoi sert le bilan d’une entreprise ?",
+    "a": "Le bilan présente la situation financière d’une entreprise à une date donnée, en listant ses actifs, passifs et capitaux propres.",
+    "keywords": [
+      "bilan",
+      "actifs",
+      "passifs",
+      "capitaux propres",
+      "situation financière"
+    ]
+  },
+  {
+    "id": "faq#compte-resultat",
+    "q": "Qu’est-ce que le compte de résultat ?",
+    "a": "Le compte de résultat mesure la performance économique sur une période, en comparant produits et charges pour déterminer le bénéfice.",
+    "keywords": [
+      "compte de résultat",
+      "produits",
+      "charges",
+      "bénéfice",
+      "performance"
+    ]
+  },
+  {
+    "id": "faq#resultat-net",
+    "q": "Comment définir le résultat net ?",
+    "a": "Le résultat net est le bénéfice ou la perte de l’entreprise après impôts, représentant la richesse créée pour les actionnaires.",
+    "keywords": ["résultat net", "bénéfice", "perte", "impôts", "actionnaires"]
+  },
+  {
+    "id": "faq#capitaux-propres",
+    "q": "Que représentent les capitaux propres ?",
+    "a": "Les capitaux propres sont les ressources appartenant aux actionnaires : capital social, réserves et résultat non distribué.",
+    "keywords": [
+      "capitaux propres",
+      "capital social",
+      "réserves",
+      "actionnaires"
+    ]
+  },
+  {
+    "id": "faq#endettement",
+    "q": "Comment évaluer l’endettement d’une entreprise ?",
+    "a": "L’endettement se mesure par le poids des dettes financières par rapport aux fonds propres, indiquant le risque financier.",
+    "keywords": ["endettement", "dettes", "levier financier", "risque"]
+  },
+  {
+    "id": "faq#ratio-liquidite",
+    "q": "Qu’est-ce que le ratio de liquidité ?",
+    "a": "Le ratio de liquidité mesure la capacité d’une entreprise à honorer ses dettes à court terme avec ses actifs disponibles.",
+    "keywords": [
+      "ratio de liquidité",
+      "dettes court terme",
+      "actifs",
+      "solvabilité"
+    ]
+  },
+  {
+    "id": "faq#valeur-ajoutee",
+    "q": "Qu’est-ce que la valeur ajoutée ?",
+    "a": "La valeur ajoutée correspond à la richesse créée par l’entreprise, égale à la différence entre la production et les consommations intermédiaires.",
+    "keywords": [
+      "valeur ajoutée",
+      "production",
+      "richesse",
+      "consommations intermédiaires"
+    ]
+  },
+  {
+    "id": "faq#taux-rentabilite",
+    "q": "Qu’est-ce que le taux de rentabilité ?",
+    "a": "Le taux de rentabilité mesure le rapport entre le bénéfice généré et les ressources investies, exprimé en pourcentage.",
+    "keywords": [
+      "taux de rentabilité",
+      "investissement",
+      "profitabilité",
+      "bénéfice"
+    ]
+  },
+  {
+    "id": "faq#amortissement",
+    "q": "Pourquoi fait-on de l’amortissement ?",
+    "a": "L’amortissement permet de répartir le coût d’un actif sur sa durée d’utilisation, reflétant la perte de valeur dans les comptes.",
+    "keywords": ["amortissement", "actifs", "dépréciation", "comptabilité"]
+  },
+  {
+    "id": "faq#tva",
+    "q": "Qu’est-ce que la TVA ?",
+    "a": "La TVA est une taxe sur la consommation, collectée par les entreprises sur leurs ventes et reversée à l’État.",
+    "keywords": ["tva", "taxe", "consommation", "impôt indirect"]
+  },
+  {
+    "id": "faq#point-mort",
+    "q": "Qu’appelle-t-on le point mort (ou seuil de rentabilité) ?",
+    "a": "Le point mort correspond au niveau de chiffre d’affaires à partir duquel l’entreprise couvre l’ensemble de ses charges et commence à être rentable.",
+    "keywords": [
+      "point mort",
+      "seuil de rentabilité",
+      "charges",
+      "chiffre d’affaires"
+    ]
+  },
+  {
+    "id": "faq#budget-previsionnel",
+    "q": "À quoi sert un budget prévisionnel ?",
+    "a": "Un budget prévisionnel permet d’anticiper les recettes et dépenses futures afin de piloter la gestion financière.",
+    "keywords": [
+      "budget prévisionnel",
+      "recettes",
+      "dépenses",
+      "gestion financière"
+    ]
+  }
+]
