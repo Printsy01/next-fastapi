@@ -102,7 +102,7 @@ orm: prisma
     dto.py # Model pour le body provenant du client
     utils.py # Contient les fonctions utilitaires comme normalize
     faq.json # Données de base de l'IA
-    logs/ Contient un fichier de log a chaque reponse de l'IA
+    logs/ Contient un fichier de log a chaque question-reponse du chatbot
     requirements.txt contient les dépendances à installer
 
 # Limites éventuelles:
