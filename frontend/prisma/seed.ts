@@ -84,3 +84,5 @@ const articles: Prisma.ArticleCreateInput[] = [
 export async function main() {
   for (const a of articles) await prisma.article.create({ data: a });
 }
+
+main();
