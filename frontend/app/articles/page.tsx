@@ -5,11 +5,15 @@ import { API_URL } from "../environment/api";
 import { Article } from "../types";
 import IsLoading from "../components/IsLoading";
 import IsError from "../components/IsError";
+import { useDebounce } from "../hooks/useDebounce";
 
 export default function Articles() {
-  const { data, loading, error } = useFetch<Article>(`${API_URL}/aricles`);
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState("desc");
+  const debouncedQuery = useDebounce(query, 500);
+  const { data, loading, error } = useFetch<Article>(`${API_URL}/articles`, {
+    params: { sort: sort, query: debouncedQuery },
+  });
 
   return (
     <div className="w-full px-20 flex flex-col gap-7">
@@ -21,6 +25,8 @@ export default function Articles() {
             </label>
             <input
               type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
               className="p-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Rechercher ..."
             />
@@ -29,14 +35,17 @@ export default function Articles() {
             <label className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">
               Filtrer par date
             </label>
-            <select className="p-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <select
+              className="p-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              onChange={(e) => setSort(e.target.value)}
+            >
               <option value="desc">Plus récent au plus ancien</option>
               <option value="asc">Plus ancien au plus récent</option>
             </select>
           </div>
         </div>
       </div>
-      <div className="p-3 flex justify-center items-center bg-gray-50 w-full shadow-md rounded-md min-h-96">
+      <div className="p-3 flex justify-center bg-gray-50 w-full shadow-md rounded-md min-h-96">
         {loading ? (
           <IsLoading />
         ) : error ? (
@@ -46,7 +55,7 @@ export default function Articles() {
             onRetry={() => window.location.reload()!}
           />
         ) : (
-          <div className="relative overflow-x-auto">
+          <div className="relative overflow-x-auto w-full">
             <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
               <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
