@@ -1,3 +1,4 @@
+import { ApiResponse, Article } from "@/app/types";
 import prisma from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
@@ -21,7 +22,7 @@ export async function GET(request: Request) {
         )
       : articles;
 
-    const response = {
+    const response: ApiResponse<Article> = {
       data: queryArticles,
       message: "List of articles",
     };

@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { ApiResponse } from "../types";
 
 function buildParams(params: Record<string, any>) {
   const query = new URLSearchParams();
@@ -18,7 +19,7 @@ export default function useFetch<T>(
     options,
   }: { params?: Record<string, any>; options?: RequestInit } = {}
 ) {
-  const [data, setData] = useState<T | null>(null);
+  const [data, setData] = useState<T[] | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -35,9 +36,11 @@ export default function useFetch<T>(
 
         if (!res.ok) throw new Error("Erreur lors de l'appel API");
 
-        const json = await res.json();
+        const json: ApiResponse<T> = await res.json();
 
-        if (!ignore) setData(json);
+        console.log(json);
+
+        if (!ignore) setData(json.data);
       } catch (error: any) {
         if (!ignore) setError(error.message);
       } finally {
