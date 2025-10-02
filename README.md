@@ -37,6 +37,10 @@ cd next-fastapi
 ```bash
 cd frontend
 npm install
+```
+
+Génerer le client prisma
+```bash
 npx prisma generate
 ```
 
