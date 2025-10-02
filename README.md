@@ -76,34 +76,35 @@ orm: prisma
 
 - Next.js:
   app/
-  ---api/ # API Routes Next.js
-  -------articles/ # Endpoints REST pour les articles
-  ------------route.ts #
-  ---articles/
-  ------------page.tsx # Page principale de liste des articles
-  ---components/ # Composants React réutilisables
-  ---environnement/  
-  -----------------api.ts # On charge les variables d'environnement
-  ---hooks/ # Custom React Hooks
-  ---------useFetch.ts # Hook pour les appels API
-  ---------useDebounce.ts # Hook pour retarder les appels API quand on tape sur rechercher
-  ---------useChatBot.ts # Hook pour l'appel API du chatbot
-  ---types/ #
-  ---------index.d.ts # Types globaux
-  ---layout.tsx # Layout principal de l'application
-  ---page.tsx # Page d'accuei
-  prisma/
-  ---schema.prisma # Schéma de la base de données
-  ---seed.db # Données pour la base
-  ---seed.ts # Script pour peupler la base de données
+    ---api/                    # API Routes Next.js
+    -------articles/           # Endpoints REST pour les articles
+    ------------route.ts       # Gestion des requêtes HTTP
+    ---articles/
+    ------------page.tsx       # Page principale de liste des articles
+    ---components/             # Composants React réutilisables
+    ---environnement/
+    -----------------api.ts    # Chargement des variables d'environnement
+    ---hooks/                  # Custom React Hooks
+    ---------useFetch.ts       # Hook pour les appels API
+    ---------useDebounce.ts    # Hook pour retarder les appels API (recherche)
+    ---------useChatBot.ts     # Hook pour l'appel API du chatbot
+    ---types/
+    ---------index.d.ts        # Types globaux
+    ---layout.tsx              # Layout principal de l'application
+    ---page.tsx                # Page d'accueil
+    
+    prisma/
+    ---schema.prisma           # Schéma de la base de données
+    ---seed.db                 # Données pour la base
+    ---seed.ts                 # Script pour peupler la base de données
 
   - FastAPI:
-    main.py # Application principale et API qui ecoute "/chat"
-    dto.py # Model pour le body provenant du client
-    utils.py # Contient les fonctions utilitaires comme normalize
-    faq.json # Données de base de l'IA
-    logs/ Contient un fichier de log a chaque question-reponse du chatbot
-    requirements.txt contient les dépendances à installer
+    main.py                    # Application principale et API qui écoute "/chat"
+    dto.py                     # Modèles pour le body provenant du client
+    utils.py                   # Fonctions utilitaires (normalize, etc.)
+    faq.json                   # Données de base de l'IA
+    logs/                      # Contient un fichier de log à chaque question-réponse du chatbot
+    requirements.txt           # Dépendances à installer
 
 # Limites éventuelles:
 
