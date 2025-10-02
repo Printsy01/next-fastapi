@@ -1,6 +1,6 @@
 import unicodedata
 import os
-import datetime
+from datetime import datetime
 from typing import Optional
 
 LOG_DIR = "logs"
@@ -19,7 +19,7 @@ def save_logs(user_input: str, response: str, response_id: Optional[str]):
     log_entry = (
         f"{timestamp} | "
         f"Message: \"{user_input}\" | "
-        f"Réponse: {response}\n" |
+        f"Réponse: {response}\n | "
         f"Source: {sources}\n"
     )
     try:
