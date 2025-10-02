@@ -37,6 +37,7 @@ cd next-fastapi
 ```bash
 cd frontend
 npm install
+npx prisma generate
 ```
 
 ## Installation FastAPI (backend chatbot)
