@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { FASTAPI_URL } from "../environment/api";
 
 export function useChatbot() {
   const [messages, setMessages] = useState<
@@ -12,7 +13,7 @@ export function useChatbot() {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:8000/chat", {
+      const response = await axios.post(`${FASTAPI_URL}/chat`, {
         message: text,
       });
 
