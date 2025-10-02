@@ -26,7 +26,7 @@ Pour Next.js:
 
 Pour FastAPI:
 
-- cd python-microservice
+- cd python-service
 - python -m venv venv
 
 # Sur Windows:
@@ -41,7 +41,7 @@ Pour FastAPI:
 
 # Mise en place variable d'environnement
 
-- .env.local à la racine de chaque projet /frontend/.env.local et /python-microservice/.env.local
+- .env.local à la racine de chaque projet /frontend/.env.local et /python-service/.env.local
   Les variables nécessaires
 
 - Pour Next.js:
@@ -60,7 +60,7 @@ Dans le dossier /frontend
 - npm run dev
 
 Pour FastAPI:
-Dans le dossier /python-microservice
+Dans le dossier /python-service
 
 - uvicorn main:app --reload --port 8000
 
@@ -76,35 +76,35 @@ orm: prisma
 
 - Next.js:
   app/
-    ---api/                    # API Routes Next.js
-    -------articles/           # Endpoints REST pour les articles
-    ------------route.ts       # Gestion des requêtes HTTP
-    ---articles/
-    ------------page.tsx       # Page principale de liste des articles
-    ---components/             # Composants React réutilisables
-    ---environnement/
-    -----------------api.ts    # Chargement des variables d'environnement
-    ---hooks/                  # Custom React Hooks
-    ---------useFetch.ts       # Hook pour les appels API
-    ---------useDebounce.ts    # Hook pour retarder les appels API (recherche)
-    ---------useChatBot.ts     # Hook pour l'appel API du chatbot
-    ---types/
-    ---------index.d.ts        # Types globaux
-    ---layout.tsx              # Layout principal de l'application
-    ---page.tsx                # Page d'accueil
-    
-    prisma/
-    ---schema.prisma           # Schéma de la base de données
-    ---seed.db                 # Données pour la base
-    ---seed.ts                 # Script pour peupler la base de données
+  ---api/ # API Routes Next.js
+  -------articles/ # Endpoints REST pour les articles
+  ------------route.ts # Gestion des requêtes HTTP
+  ---articles/
+  ------------page.tsx # Page principale de liste des articles
+  ---components/ # Composants React réutilisables
+  ---environnement/
+  -----------------api.ts # Chargement des variables d'environnement
+  ---hooks/ # Custom React Hooks
+  ---------useFetch.ts # Hook pour les appels API
+  ---------useDebounce.ts # Hook pour retarder les appels API (recherche)
+  ---------useChatBot.ts # Hook pour l'appel API du chatbot
+  ---types/
+  ---------index.d.ts # Types globaux
+  ---layout.tsx # Layout principal de l'application
+  ---page.tsx # Page d'accueil
+
+  prisma/
+  ---schema.prisma # Schéma de la base de données
+  ---seed.db # Données pour la base
+  ---seed.ts # Script pour peupler la base de données
 
   - FastAPI:
-    main.py                    # Application principale et API qui écoute "/chat"
-    dto.py                     # Modèles pour le body provenant du client
-    utils.py                   # Fonctions utilitaires (normalize, etc.)
-    faq.json                   # Données de base de l'IA
-    logs/                      # Contient un fichier de log à chaque question-réponse du chatbot
-    requirements.txt           # Dépendances à installer
+    main.py # Application principale et API qui écoute "/chat"
+    dto.py # Modèles pour le body provenant du client
+    utils.py # Fonctions utilitaires (normalize, etc.)
+    faq.json # Données de base de l'IA
+    logs/ # Contient un fichier de log à chaque question-réponse du chatbot
+    requirements.txt # Dépendances à installer
 
 # Limites éventuelles:
 
