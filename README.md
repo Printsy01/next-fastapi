@@ -33,7 +33,7 @@ Entrer dans le dossier
 cd next-fastapi
 ```
 
-## Installation Next.js (frontend)
+## Installation Next.js (frontend + backend)
 
 ```bash
 cd frontend
@@ -46,7 +46,7 @@ Génerer le client prisma
 npx prisma generate
 ```
 
-## Installation FastAPI (backend chatbot)
+## Installation FastAPI (service chatbot)
 
 ```bash
 cd ../python-service
