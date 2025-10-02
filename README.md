@@ -27,6 +27,11 @@ Cloner le projet :
 git clone https://github.com/Printsy01/next-fastapi.git
 ```
 
+Entrer dans le dossier
+```bash
+cd next-fastapi
+```
+
 ## Installation Next.js (frontend)
 
 ```bash
