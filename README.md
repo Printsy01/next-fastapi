@@ -43,7 +43,7 @@ npx prisma generate
 ## Installation FastAPI (backend chatbot)
 
 ```bash
-cd python-service
+cd ../python-service
 python -m venv venv
 ```
 
