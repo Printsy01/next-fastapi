@@ -7,7 +7,7 @@ import IsLoading from "../components/IsLoading";
 import IsError from "../components/IsError";
 
 export default function Articles() {
-  const { data, loading, error } = useFetch<Article>(`${API_URL}/articles`);
+  const { data, loading, error } = useFetch<Article>(`${API_URL}/aricles`);
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState("desc");
 
@@ -36,14 +36,14 @@ export default function Articles() {
           </div>
         </div>
       </div>
-      <div className="p-3 bg-gray-50 w-full shadow-md rounded-md">
+      <div className="p-3 flex justify-center items-center bg-gray-50 w-full shadow-md rounded-md min-h-96">
         {loading ? (
           <IsLoading />
         ) : error ? (
           <IsError
             error={error}
             title="Une erreur est survenue"
-            onRetry={window.location.reload()!}
+            onRetry={() => window.location.reload()!}
           />
         ) : (
           <div className="relative overflow-x-auto">
