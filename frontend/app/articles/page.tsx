@@ -10,10 +10,28 @@ import { useDebounce } from "../hooks/useDebounce";
 export default function Articles() {
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState("desc");
+  const [queryError, setQueryError] = useState("");
   const debouncedQuery = useDebounce(query, 500);
+
+  const isValidQuery = (value: string) => /^[a-zA-Z0-9]*$/.test(value);
+
   const { data, loading, error } = useFetch<Article>(`${API_URL}/articles`, {
-    params: { sort: sort, query: debouncedQuery },
+    params: {
+      sort: sort,
+      query: isValidQuery(debouncedQuery) ? debouncedQuery : "",
+    },
   });
+
+  const handleQueryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+
+    if (value === "" || isValidQuery(value)) {
+      setQuery(value);
+      setQueryError("");
+    } else {
+      setQueryError("Seuls les caractères alphanumériques sont autorisés");
+    }
+  };
 
   return (
     <div className="w-full px-20 flex flex-col gap-7">
@@ -26,10 +44,15 @@ export default function Articles() {
             <input
               type="text"
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              className="p-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              onChange={handleQueryChange}
+              className={`p-1 bg-gray-50 border ${
+                queryError ? "border-red-500" : "border-gray-300"
+              } text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
               placeholder="Rechercher ..."
             />
+            {queryError && (
+              <p className="mt-1 text-xs text-red-600">{queryError}</p>
+            )}
           </div>
           <div className="p-5">
             <label className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">
