@@ -13,7 +13,7 @@ export default function Articles() {
   const [queryError, setQueryError] = useState("");
   const debouncedQuery = useDebounce(query, 500);
 
-  const isValidQuery = (value: string) => /^[a-zA-Z0-9]*$/.test(value);
+  const isValidQuery = (value: string) => /^[a-zA-Z]*$/.test(value);
 
   const { data, loading, error } = useFetch<Article>(`${API_URL}/articles`, {
     params: {
@@ -29,7 +29,7 @@ export default function Articles() {
       setQuery(value);
       setQueryError("");
     } else {
-      setQueryError("Seuls les caractères alphanumériques sont autorisés");
+      setQueryError("Seuls les caractères alphabets sont autorisés");
     }
   };
 
