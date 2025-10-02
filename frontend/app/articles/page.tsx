@@ -34,7 +34,7 @@ export default function Articles() {
   };
 
   return (
-    <div className="w-full px-20 flex flex-col gap-7">
+    <div className="w-full px-1 md:px-20 flex flex-col gap-7">
       <div className="p-3 bg-gray-50 w-full shadow-md rounded-md">
         <div className="flex flex-row items-center">
           <div className="p-5">
@@ -45,7 +45,7 @@ export default function Articles() {
               type="text"
               value={query}
               onChange={handleQueryChange}
-              className={`p-1 bg-gray-50 border ${
+              className={`bg-white p-1 border ${
                 queryError ? "border-red-500" : "border-gray-300"
               } text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
               placeholder="Rechercher ..."
@@ -59,7 +59,7 @@ export default function Articles() {
               Filtrer par date
             </label>
             <select
-              className="p-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="p-1 bg-white border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               onChange={(e) => setSort(e.target.value)}
             >
               <option value="desc">Plus récent au plus ancien</option>

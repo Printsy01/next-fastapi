@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-gray-100 p-10">{children}</body>
+      <body className="bg-gray-100 p-3 md:p-10">{children}</body>
       <SideChat />
     </html>
   );
